@@ -1,0 +1,72 @@
+body{
+    min-width:100vh;
+}
+
+.chatbox{
+    width:40%;
+    margin:auto;
+    margin-top:5vh;
+}
+.topbar{
+    background-color: purple;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+.topbar .sp1{
+    font-size: 120%;
+    font-weight: bolder;
+}
+.chatsdata{
+    height:50vh;
+    border: 1px solid black;
+    padding:5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.messagedata{
+    max-width:70%;
+}
+.messagedata div{
+    display: inline-block;
+    max-width:98%;
+    word-wrap: break-word;
+}
+.chatsdata::-webkit-scrollbar{
+    width: 6px;
+    background-color: gainsboro;
+}
+.chatsdata::-webkit-scrollbar-track{
+    width:6px;
+}
+.chatsdata::-webkit-scrollbar-thumb{
+    background: purple;
+}
+
+.typebar{
+    display: flex;
+    justify-content: space-between;
+}
+.textbox{
+    width:80%;
+}
+.send{
+    width:20%;
+}
+.send button{
+    width:100%;
+    padding:10px 0px;
+    background-color: purple;
+    color:white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.textbox input{
+    width:100%;
+    padding:10px 0px;
+}
+input:focus{
+    outline: none;
+}

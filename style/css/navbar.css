@@ -1,0 +1,12 @@
+.container{
+    background-color:gainsboro;
+    width:70%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.container span{
+    font-size: 120%;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Engine</title>
+    <link href="/css/navbar.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <span><strong>Chat Engine</strong></span>
+        </div>
+        <div>
+            <% if(signup){ %>
+            <a style="color:gray" href="/signup">Signup</a>&nbsp;&nbsp;
+            <a style="color:black" href="/signin">Login</a>
+            <% }else{ %>
+            <a style="color:black" href="/signup">Signup</a>&nbsp;&nbsp;
+            <a style="color:gray" href="/signin">Login</a>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
