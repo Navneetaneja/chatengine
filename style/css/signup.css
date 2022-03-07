@@ -1,7 +1,13 @@
+body{
+    min-width:100vh;
+}
 .form{
     width:30%;
     margin: auto;
     margin-top: 5vh;
+    background-color: gainsboro;
+    padding: 20px;
+    border-radius:10px ;
 }
 form{
     display: flex;

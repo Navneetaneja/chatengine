@@ -1,11 +1,17 @@
 .container{
-    background-color:gainsboro;
+    background:linear-gradient(to left,#ad058c,#333399);
+    color: white;
     width:70%;
     margin:auto;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     border-radius: 5px;
+}
+.container div a{
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: bolder;
 }
 .container span{
     font-size: 120%;

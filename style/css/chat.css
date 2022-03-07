@@ -8,10 +8,11 @@ body{
     margin-top:5vh;
 }
 .topbar{
-    background-color: purple;
+    background-color: #ad058c;
     color: white;
     border: 1px solid black;
     padding: 10px;
+    border-radius: 5px;
 }
 .topbar .sp1{
     font-size: 120%;
@@ -22,9 +23,11 @@ body{
     border: 1px solid black;
     padding:5px;
     overflow: scroll;
+    border-radius: 5px;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    background: url('https://i.pinimg.com/originals/60/82/e2/6082e23ae87e3fc1878a344c422279e9.jpg') center/cover no-repeat;
 }
 .messagedata{
     max-width:70%;
@@ -42,31 +45,42 @@ body{
     width:6px;
 }
 .chatsdata::-webkit-scrollbar-thumb{
-    background: purple;
+    background: #ad058c;
 }
 
 .typebar{
     display: flex;
     justify-content: space-between;
+    border-radius: 5px;
 }
 .textbox{
     width:80%;
+    border-radius: 5px;
 }
 .send{
     width:20%;
+    border-radius: 5px;
+
 }
 .send button{
     width:100%;
     padding:10px 0px;
-    background-color: purple;
+    background-color: #ad058c;
     color:white;
     border: 2px solid black;
     cursor: pointer;
+    border-radius: 5px;
+
 }
 .textbox input{
     width:100%;
     padding:10px 0px;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: gainsboro;
+    font-weight: bold;
 }
+
 input:focus{
     outline: none;
 }

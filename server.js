@@ -11,11 +11,6 @@ const app=express();
 const chatserver=require('http').createServer(app);
 const io=require('socket.io')(chatserver,{cors:{origin:'*'}});
 const chats=require('./model/chats');
-const user = require('./model/user');
-const res = require('express/lib/response');
-
-var person=null;
-
 
 app.use(session({
     name: 'login',
@@ -43,24 +38,23 @@ app.use(express.urlencoded({extended:true}));
 
 io.on('connection',function(socket){
     console.log("token",socket.id);
-    if(person!==null)
-    {
     socket.on('message',(data)=>{
+        var arr=data.split("-");
         chats.create({
-            message:data,
-            sender:person.name,
-            senderId:person._id
+            message:arr[0],
+            sender:arr[1],
+            senderId:arr[2]
         })
+        // console.log(arr);
+        socket.broadcast.emit('message',data);
         socket.emit('message',data);
     })
-    }
 });
 
 app.get('/', passport.checkAuthentication, function (req, res) {
-    person=res.locals.user;
     chats.find({},null,{sort:{createdOn:-1}},function(err,data){
-        console.log(data);
-        return res.render('chat',{chatdata:data,userId:person._id});
+        // console.log(data);
+        return res.render('chat',{chatdata:data});
     })
 })
 
